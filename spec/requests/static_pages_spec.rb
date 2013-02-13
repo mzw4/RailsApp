@@ -32,12 +32,12 @@ describe "Static pages" do
 
   describe "About page" do
 
-    it "should have the content 'Help'" do
+    it "should have the content 'About'" do
       visit '/static_pages/about'
       page.should have_selector('h1', :text => "About")
     end
 
-    it "should have the title 'Home'" do
+    it "should have the title 'About'" do
       visit '/static_pages/about'
       page.should have_selector('title',
                         :text => "INFO2310 Microposter | About")

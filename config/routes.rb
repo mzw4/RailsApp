@@ -1,15 +1,18 @@
 Info2310::Application.routes.draw do
-
   resources :micro_posts
-
-
   resources :users
 
+  get "static_pages/home"
+  get "static_pages/help"
+  get "static_pages/about"
 
-root :to => 'static_pages#home'
-get '/help' => 'static_pages#help'
-get '/about' => 'static_pages#about'
-get '/home' => 'static_pages#home'
+  root to: 'static_pages#home'
+
+  
+  #root :to 'static_pages#home'
+#get '/help' => 'static_pages#help'
+#get '/about' => 'static_pages#about'
+#get '/home' => 'static_pages#home'
 
 #get "static_pages/home"
 #get "static_pages/help"
