@@ -1,5 +1,8 @@
 Info2310::Application.routes.draw do
 
+  resources :micro_posts
+
+
   resources :users
 
 
