@@ -18,8 +18,8 @@ class UserMailer < ActionMailer::Base
   #   en.user_mailer.mentioned.subject
   #
   def mentioned(micro_post, mentioned_user)
-    @user = mentioned_user
+    @mentioned_user = mentioned_user
 	@micro_post = micro_post
-    mail(to: mentioned_user.email, subject: "You were mentioned")
+    mail(to: @mentioned_user.email, subject: "You were mentioned")
   end
 end
